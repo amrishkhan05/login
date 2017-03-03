@@ -1,0 +1,20 @@
+<div class="wrapper" ng-controller='loginController'>
+
+    <div class="container">
+        <div>
+            <div class="login-Section">
+                <h3 class="login-title">Login</h3>
+                <div class="login">
+
+                    <form method="post" name="editForm" action="/">
+                        <p class="user-name">User Name:<input type="text" ng-model="records.userName" name="username" required class="form-control uname" /></p>
+                        <p class="password">Password:<input type="password" ng-model="records.password" name="password" required class="form-control pwd" /></p>
+                        <input type="submit" class="sub" ng-disabled="editForm.$invalid" value="Login"> || <button ng-click="reg()"> Register!</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

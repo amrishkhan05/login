@@ -1,0 +1,45 @@
+<div  ng-controller='mainController'>
+
+ <pre ng-show="isShow"><h4>Welcome <b>{{user.username}}</b> You are successfully logged in</h4></pre>
+  <ul class="tabmenu">
+    <li ng-class="{'active': tabName=='tab1'}" ng-click="tabName='tab1'">Tab1{{$rootScope.name}}</li>
+    <li ng-class="{'active': tabName=='tab2'}" ng-click="tabName='tab2'">Tab2</li>
+    <li ng-class="{'active': tabName=='tab3'}" ng-click="tabName='tab3'">Tab3</li>
+  </ul>
+
+  <div ng-switch="tabName">
+    <div ng-switch-when="tab1"><p>tab1 content</p></div>
+    <div ng-switch-when="tab2"> tab2</div>
+   
+<div ng-switch-when="tab3">
+    	<div>
+<h3 class="faq">Frequently Asked Questions</h3>
+<div class="faq-section">
+    <div class="faq-and-ans">
+<button class="accordion" ng-click="ShowHide()"><span><img src="img/arrow.png"></span><span>Q1. What is LorenIpsum?</span></button>
+<div  ng-show="IsHidden" >
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+
+<button class="accordion" ng-click="ShowHide2()"><img src="img/arrow.png">Q2. What is LorenIpsum?</button>
+<div ng-show="IsHidden2">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+
+<button class="accordion" ng-click="ShowHide3()" ><img src="img/arrow.png">Q3. What is LorenIpsum?</button>
+<div ng-show="IsHidden3" >
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+<button class="accordion" ng-click="ShowHide4()" ><img src="img/arrow.png">Q4. What is LorenIpsum?</button>
+<div  ng-show="IsHidden4">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+
+
+  </div>
+</div>

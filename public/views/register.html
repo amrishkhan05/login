@@ -1,0 +1,32 @@
+
+    <div ng-controller="regController">
+        <div class="container ">
+            <h3>Registration form.</h3>
+            <form name="frmRegister" method="post" action="/register" >
+                <div>
+                   <p class="name"> Name: <input name="name" class="form-control" type="text" ng-model="reg.name" required /></p>
+                    <span class="error" ng-show="frmRegister.name.$dirty && frmRegister.name.$error.required">First Name is required</span>
+                </div>
+                <div>
+                   <p class="designation"> Designation: <!-- <input name="last_name" class="form-control" type="text" ng-model="reg.lastName" required />
+                    <span class="error" ng-show="frmRegister.last_name.$dirty && frmRegister.last_name.$error.required">Last Name is required</span> -->
+                    <select name="designation" ng-model="reg.designation" required >
+                            <option value="HR manager">HR manager</option>
+                            <option value="HR staff">HR staff</option>
+                            <option value="Assosciates">Assosciates</option>
+                            <option value="Trainee5">Trainee5</option>
+                            </select> </p>
+                    <span class="error" ng-show="frmRegister.designation.$dirty && frmRegister.designation.$error.required">Last Name is required</span> 
+
+                </div>
+                <div>  
+   
+                    <p class="password">Password: <input name="password" class="form-control" type="password" ng-model="reg.password" required /></p>
+                   
+                </div><br />
+                <input type="submit" value="Save" ng-disabled="frmRegister.$invalid" />
+                <span ng-show="registered"><br />YOU ARE SUCCESSFULLY REGISTERED.</span>
+            </form>
+        </div>
+    </div>
+
